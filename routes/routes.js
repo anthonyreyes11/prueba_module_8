@@ -57,7 +57,7 @@ router.post('/new_question', protected_route, async (req, res) => {
     falsa3 = req.body.respuesta_falsa3,
     falsa4 = req.body.respuesta_falsa4;
   await crearPregunta(pregunta, respuesta_correcta, falsa1, falsa2, falsa3, falsa4)
-  res.redirect('/')
+  res.redirect('/new_question')
 })
 
 router.get('/lets_play', protected_route, async (req, res) => {
